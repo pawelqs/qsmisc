@@ -1,6 +1,6 @@
 Package: qsmisc
 Title: My personal misc package
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: 
     person("Paweł", "Kuś", , "kpawel2210@gmail.com", role = c("aut", "cre"))
 Description: This package holds misc functions that I frequently use, but
@@ -8,7 +8,7 @@ Description: This package holds misc functions that I frequently use, but
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

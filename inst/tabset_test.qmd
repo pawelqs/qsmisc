@@ -1,0 +1,24 @@
+---
+title: "Untitled"
+format: 
+  html:
+    self-contained: true
+editor: visual
+---
+
+```{r setup}
+library(qsmisc)
+```
+
+# Tabsets
+
+:::: {.column-page-outset}
+::: {.panel-tabset}
+
+```{r, results='asis'}
+x <- list(z = 1:10, y = rnorm(100))
+tabset(x)
+```
+
+:::
+::::

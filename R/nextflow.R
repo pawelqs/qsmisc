@@ -12,16 +12,16 @@
 #'
 #' @examples
 #' library(qsmisc)
-#' write_nf_session_info("PROCESSX":, path = "versions.yml")
+#' write_nf_session_info("PROCESSX", path = tempfile("versions.yml"))
 #'
 #' \dontrun{
-#' write_nf_session_info("${task.process}":, path = "versions.yml")
+#' write_nf_session_info("${task.process}", path = "versions.yml")
 #' }
 write_nf_session_info <- function(task_process,
                                   ...,
                                   pkgs = "other_packages",
                                   path = "versions.yml") {
-  si <- sessionInfo()
+  si <- utils::sessionInfo()
   r_version <- strsplit(si$R.version$version.string, ' ')[[1]][3]
 
   pkgs_versions <- c(si[["otherPkgs"]], si[["loadedOnly"]]) |>
@@ -32,7 +32,7 @@ write_nf_session_info <- function(task_process,
     if (pkgs == "other_packages") {
       names(si$otherPkgs)
     } else if (pkgs == "all") {
-      names(pkg_versions)
+      names(pkgs_versions)
     } else {
       pkgs
     }

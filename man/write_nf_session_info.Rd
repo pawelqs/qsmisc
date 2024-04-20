@@ -30,9 +30,9 @@ Write session info to a YAML file in a nf-core manner
 }
 \examples{
 library(qsmisc)
-write_nf_session_info("PROCESSX":, path = "versions.yml")
+write_nf_session_info("PROCESSX", path = tempfile("versions.yml"))
 
 \dontrun{
-write_nf_session_info("${task.process}":, path = "versions.yml")
+write_nf_session_info("${task.process}", path = "versions.yml")
 }
 }
